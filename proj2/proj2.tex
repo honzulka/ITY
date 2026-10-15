@@ -1,0 +1,121 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\usepackage[text={187mm,258mm}, centering]{geometry}
+
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\newtheorem{definice}{Definice}
+\newtheorem{veta}{Věta}
+
+\begin{document}
+
+    \begin{titlepage}
+        \begin{center}
+            \Huge
+            \textsc{Vysoké učení technické v Brně} \\
+            \vspace{0.5 em}
+            \textsc{\huge{Fakulta informačních technologií}} \\
+            \vspace{\stretch{0.382}}
+            \huge
+            Typografie a publikování\,--\,2. projekt \\
+            \vspace{0.8 em}
+            Sazba dokumentů a matematických výrazů
+            \vspace{\stretch{0.618}}
+        \end{center}
+
+        {\Large 2026 \hfill Jan Černoch (xcernoj00)}
+    \end{titlepage}
+
+\section*{Úvod}
+V této úloze vysázíme titulní stranu a ukázku matematického textu, v němž se vyskytuje Věta~\ref{veta1}, a Definice~\ref{def2}, nebo rovnice~\eqref{eq7} na straně~\pageref{eq7}. Pro vytvoření těchto odkazů použijeme kombinace příkazů \verb|\label|, \verb|\ref|, \verb|\eqref| a \verb|\pageref|. Před odkazy patří nezlomitelná mezera. Text zvýrazníme příkazem \verb|\emph|. Pro \LaTeX ové příkazy (s obráceným lomítkem) použijeme \verb|\verb|. 
+
+Titulní strana je vysázena prostředím \verb|titlepage|. Nadpis je v optickém středu s využitím \emph{zlatého řezu} probraného na přednášce. Na titulní straně jsou tři různé velikosti písma a mezi dvojicemi řádků textu je řádkování se zadanou velikostí 0,5\,em a 0,8\,em\footnote{Použijte správnou velikost mezery mezi číslem a jednotkou.}.
+
+\section{Matematický text}
+Symboly číselných množin sázíme makrem \verb|\mathbb|, kaligrafická písmena makrem \verb|\mathcal|. Pozor na tvar i sklon řeckých písmen: srovnejte \verb|\rho| a \verb|\varrho|. Konstrukce \verb|${}$| nebo \verb|\mbox{}| zabrání zalomení výrazu.
+
+Pro definice a věty slouží prostředí definovaná pří-
+kazem \verb|\newtheorem| z balíku \emph{amsthm}. Tato prostředí obracejí význam \verb|\emph|: zvýrazňuje se v nich písmem v základním řezu. Značka konce důkazu je \verb|\qed|.
+
+\subsection{Monoidy}
+Monoid je algebraická struktura s jednou binární operací, která je \textit{asociativní} a má \textit{jednotkový prvek}.
+
+\begin{definice}\label{def1}
+\textit{Us\-pořádaná trojice $\mathcal{M} = (M, \cdot, u)$ se nazývá \emph{monoid}, když $M$ je množina, $u \in M$ je její prvek, $\cdot : M \times M \to M$ je binární operace a pro každé $x, y, z \in M$ jsou splněny následující podmínky:
+\begin{align}
+u \cdot x &= x, \label{eq1} \\
+x \cdot u &= x, \label{eq2} \\
+x \cdot (y \cdot z) &= (x \cdot y) \cdot z. \label{eq3}
+\end{align}} 
+\end{definice}
+
+\noindent Ukážeme, že každý monoid má jen jeden jednotkový prvek.
+
+\begin{veta}\label{veta1}
+\textit{Nechť $\mathcal{M}$ je monoid a nechť $u, u'$ jsou jeho jednotkové prvky. Pak $u = u'$.}
+\end{veta}
+
+Důkaz: Podle (\ref{eq2}) platí $u \cdot u' = u$ a zároveň podle (\ref{eq1}) $u \cdot u' = u'$. Celkem tedy $u = u'$.
+
+Příklady monoidů: 
+\begin{itemize}
+  \item $(\Sigma^\ast, \cdot, \varepsilon)$, kde $\Sigma$ je abeceda, $\cdot$ je operace zřetězení a $\varepsilon$ je prázdné slovo,
+  \item $(\mathbb{N}, +, 0)$, nezáporná celá čísla se sčítáním a nulou,
+  \item $(A^A, \circ, \mathrm{id}_A)$, zobrazení na pevně dané množině $A$ se skládáním a identitou.
+\end{itemize}
+
+\subsection{Homomorfismus}
+Homomorfismus monoidů zachovává jednotkový prvek i binární operaci.
+
+\begin{definice}\label{def2}
+\textit{Nechť $(M, \cdot, u)$ a $(M', \bullet, u')$ jsou monoidy, $f : M \to M'$ je zobrazení, v němž $f(u) = u'$ a pro každé $x, y \in M$ je $f(x \cdot y) = f(x) \bullet f(y)$. Potom f se nazývá \emph{homomorfismus} monoidů.}
+\end{definice}
+
+\section{Rovnice}
+Pro zarovnání rovností a nerovností pod sebe použijeme vhodné prostředí. Velikost závorek a svislých čar je potřeba přizpůsobit jejich obsahu, k tomu slouží modifikátory \verb|\left| a \verb|\right|.
+
+\begin{align}
+\lim_{p \to 0} \left( \frac{1}{n} \sum_{i=1}^{n} x_i^p \right)^{\frac{1}{p}} &= \left( \prod_{i=1}^{n} x_i \right)^{\frac{1}{n}} \label{eq4}
+\end{align}
+Zde vidíme, jak se vysází proměnná určující limitu v běžném textu: $\lim_{m \to \infty} f(m)$. Podobně je to i s dalšími symboly jako $\bigcup_{N \in \mathcal{M}} N$ či $\sum_{i=1}^{m} x_i^2$. S vynucením méně úsporné sazby příkazem \verb|\limits| budou vzorce vysázeny v podobě $\lim\limits_{m \to \infty} f(m)$ a $\sum\limits_{i=1}^{m} x_i^2$. Složitější matematické formule sázíme mimo plynulý text pomocí prostředí \verb|displaymath|.
+
+\begin{align}
+\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n} &= \ln 2 \label{eq5} \\
+\sum_{X \subseteq U} (-1)^{|X|} \left| \bigcap X \right| &= 0 \label{eq6} \\
+\lim_{\varepsilon \to 0^+} \int_{a+\varepsilon}^{b} f(x) \, dx &= \int_a^b f(y) \, dy \label{eq7}
+\end{align}
+
+\noindent Nezapomeňte rovnice, na které se odkazujete, označit vhodným jménem pomocí \verb|\label| 
+
+\section{Matice}
+Pro sázení matic se používá prostředí \verb|array| a závorky s výškou nastavenou pomocí \verb|\left|, \verb|\right|.
+\begin{displaymath}
+D = \left| \begin{array}{cccccc}
+a_{11} & 0 & 0 & \cdots & 0 \\
+a_{21} & a_{22} & 0 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn-1} & a_{nn}
+\end{array}
+\right|
+= \prod_{i=1}^{n} a_{ii}
+\end{displaymath}
+
+Prostředí \verb|array| lze úspěšně využít i jinde, například na pravé straně následující rovnosti.
+\begin{displaymath}
+B_n = \left\{ \begin{array}{ll}
+1, & \text{pro } n = 0 \\[1ex]
+\displaystyle \sum_{k=0}^{n-1} \binom{n}{k} B_k, & \text{pro } n \ge 1
+\end{array}
+\right.
+\end{displaymath}
+
+Jestliže sázíme jen levou složenou závorku, pak za párovým \verb|\right| místo závorky píšeme tečku.
+\end{document}

@@ -1,0 +1,54 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{Dostupné z: }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{wagner}
+Wagner, Z.: \emph{Typografie pro každého}. Praha: Grada, 2005.
+
+\bibitem{bringhurst}
+Bringhurst, R.: \emph{The Elements of Typographic Style}. Vancouver: Hartley \&
+  Marks, 2012.
+
+\bibitem{microtype}
+Schlicht, R.: The microtype package. 2023.
+\newline\urlprefix\url{https://ctan.org/pkg/microtype}
+
+\bibitem{root}
+Olšák, P.: Mikrotypografie v TeXu. 2010.
+\newline\urlprefix\url{https://www.root.cz/clanky/mikrotypografie-v-texu/}
+
+\bibitem{opentype}
+Microsoft: OpenType specification. 2023.
+\newline\urlprefix\url{https://learn.microsoft.com/en-us/typography/opentype/}
+
+\bibitem{latexmicro}
+Project, L.: LaTeX documentation. 2024.
+\newline\urlprefix\url{https://www.latex-project.org}
+
+\bibitem{knuth}
+Knuth, D.~E.: \emph{The TeXbook}. Reading: Addison-Wesley, 1984.
+
+\bibitem{tugboat}
+TUGboat. 2024.
+
+\bibitem{mittelbach}
+Mittelbach, F.: Micro-typographic extensions to the LaTeX typesetting system.
+  \emph{TUGboat}, ročník~40, č.~1, 2019: s. 12--20.
+
+\bibitem{hoenig}
+Hoenig, M.: TeX micro-typographic extensions. \emph{TUGboat}, ročník~19,
+  č.~3, 1998: s. 317--434.
+
+\bibitem{vutthesis}
+Dvořák, M.: Implementace mikrotypografie v systému LaTeX. 2021.
+
+\bibitem{cvutthesis}
+Havel, T.: Typografie v elektronických dokumentech. 2020.
+
+\end{thebibliography}

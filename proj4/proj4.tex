@@ -1,0 +1,76 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+
+
+\begin{document}
+
+    \begin{titlepage}
+        \begin{center}
+            \textsc{\Huge{Vysoké učení technické v Brně}} \\
+            \vspace{0.5 em}
+            \textsc{\huge{Fakulta informačních technologií}} \\
+            \vspace{\stretch{0.382}}
+            \LARGE{Typografie a publikování\,--\,4. projekt} \\
+            \Huge{Bibliografické citace}
+            \vspace{\stretch{0.618}}
+        \end{center}
+        \Large{\today \hfill Jan Černoch}
+    \end{titlepage}
+
+\clearpage
+\section*{Mikrotypografie v digitální sazbě}
+
+Mikrotypografie označuje soubor jemných typografických úprav, které zlepšují vizuální kvalitu textu. 
+Tyto úpravy se zaměřují především na detaily, jako jsou mezery mezi znaky, zarovnání okrajů nebo použití ligatur. 
+Na rozdíl od makrotypografie, která řeší strukturu dokumentu, mikrotypografie pracuje s jednotlivými znaky a jejich optickým vnímáním. 
+Podle Wagnera mají právě tyto drobné úpravy zásadní vliv na čitelnost delších textů \cite{wagner}. 
+
+Jedním z nejznámějších principů mikrotypografie je optické vyrovnání okrajů. 
+Některé znaky, například uvozovky nebo pomlčky, mohou mírně přečnívat přes okraj sazby. 
+Tím se docílí vizuálně rovného okraje, který působí přirozeněji než striktně zarovnaný blok textu. 
+Tento princip je využíván zejména v profesionální knižní sazbě \cite{bringhurst}. 
+
+Další důležitou technikou je jemné rozšiřování znaků, označované jako font expansion. 
+Tato metoda umožňuje upravit šířku znaků o velmi malé hodnoty, čímž se zlepší zalomení odstavce. 
+Rozdíl není pro čtenáře patrný, ale výrazně ovlivňuje kvalitu sazby. 
+Digitální sázecí systémy tuto techniku implementují automaticky \cite{microtype}. 
+
+Mikrotypografie úzce souvisí také s kerningem. 
+Kerning upravuje mezery mezi konkrétními dvojicemi znaků, které by jinak působily opticky nevyváženě. 
+Typickým příkladem jsou kombinace písmen „AV“ nebo „To“. 
+Správně nastavený kerning zlepšuje plynulost textu a zabraňuje vzniku rušivých mezer \cite{root}. 
+
+Dalším prvkem jsou ligatury. 
+Ligatury spojují vybrané dvojice znaků do jednoho glyfu, čímž se zlepšuje vizuální kontinuita textu. 
+Moderní formáty písem umožňují definovat ligatury pomocí OpenType funkcí \cite{opentype}. 
+Použití ligatur je běžné zejména v kvalitní knižní sazbě. 
+
+V digitálním prostředí se mikrotypografie prosadila především díky systému \LaTeX. 
+Balíček microtype umožňuje automatickou aplikaci protrusion a font expansion. 
+Tyto úpravy zlepšují zalamování řádků a celkový vzhled dokumentu \cite{latexmicro}. 
+Optimalizační algoritmus pro zalamování řádků navržený Knuthem patří mezi nejkvalitnější dostupné přístupy \cite{knuth}. 
+
+Problematika mikrotypografie je diskutována i v odborných časopisech. 
+Periodikum TUGboat pravidelně publikuje články věnované kvalitě sazby \cite{tugboat}. 
+Například Mittelbach popisuje rozšíření systému \LaTeX\ o mikrotypografické funkce \cite{mittelbach}. 
+Další práce se zabývá praktickým využitím těchto technik v dokumentech \cite{hoenig}. 
+
+Mikrotypografie je rovněž předmětem kvalifikačních prací. 
+Například diplomová práce na VUT analyzuje implementaci mikrotypografie v systému \LaTeX\ a její vliv na kvalitu sazby \cite{vutthesis}. 
+Další práce se zaměřuje na využití typografických pravidel v elektronických dokumentech \cite{cvutthesis}. 
+Výsledky těchto studií potvrzují, že i malé úpravy mohou výrazně zlepšit čitelnost textu. 
+
+Bringhurst uvádí, že „typografie existuje proto, aby uctila obsah“ \cite{bringhurst}. 
+Mikrotypografie tento princip naplňuje na úrovni jednotlivých znaků. 
+Správně aplikované mikrotypografické úpravy zvyšují estetickou kvalitu dokumentu i komfort čtení. 
+V digitální sazbě proto představují důležitou součást profesionální typografie. 
+
+\clearpage
+\bibliographystyle{czechiso}
+\bibliography{proj4}
+
+\end{document}
